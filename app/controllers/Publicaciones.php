@@ -33,6 +33,8 @@ class Publicaciones extends Controller
         }
     }
 
+    
+
     public function eliminar($idpublicacion)
     {
 
@@ -68,6 +70,10 @@ class Publicaciones extends Controller
             redirection('/home');
         }
     }
+
+
+
+
 
     public function comentar()
     {

@@ -2,6 +2,12 @@
     --main-color: #926dde
 }
 
+.text-color{
+
+    color: #ffffff;
+
+}
+
 .links {
     color: #5d5d5d
 }
@@ -118,5 +124,6 @@ body {
         margin-left: 0%;
     
       }
+
 }
 

@@ -1,4 +1,8 @@
 <?php
+/*redireccionamiento*/;
+
+
+
 
 function redirection($url) 
 {

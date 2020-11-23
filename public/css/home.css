@@ -1,4 +1,3 @@
-
 .perfil-usuario-main {
     background-color: #ffffff;
     border-bottom-left-radius: 10px;
@@ -24,18 +23,9 @@
     height: 30px;
 }
 
-.background-usuario-main {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 80px;
-    width: 100%;
-    background-color: #926dde;
-}
-
 .nombre-perfil {
     font-weight: bold;
     font-size: 20px;
-    
 }
 
 .tabla-estadisticas {
@@ -55,8 +45,8 @@
 }
 
 .tabla-estadisticas a:hover {
-    color: #926dde
-} 
+    color: #000000
+}
 
 .container-usuario-publicar {
     background-color: #ffffff;
@@ -64,7 +54,6 @@
     width: 100%;
     display: flex;
     padding: 20px;
-
 }
 
 .published {
@@ -79,7 +68,7 @@
 }
 
 .published:focus {
-    border: 1px solid #926dde;
+    border: 1px solid #000000;
 }
 
 .image-border {
@@ -94,22 +83,20 @@
     justify-content: space-between;
 }
 
-
-
 .form-publicar {
     width: 100%
 }
 
 .upload-photo {
-    background-color: #dddddd;
+    background-color: #b0f594;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 40px;
     width: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    color: #747474;
+    height: 40px;
+    color:  #b0f594;
 }
 
 .btn-publi {
@@ -121,7 +108,7 @@
 }
 
 .btn-publi:hover {
-    background-color: #926dde;
+    background-color: #000000;
     color: #ffffff
 }
 
@@ -187,12 +174,11 @@
 }
 
 .like-active {
-    color: #926dde !important;
+    color: #000000 !important;
 }
 
-
 .like-user:hover {
-    color: #926dde 
+    color: #000000
 }
 
 .formulario-comentarios {
@@ -248,5 +234,12 @@
 @media screen and (max-width: 500px) {
     .container-usuario-publicar {
         margin-top: 10px;
+    }
+    .divperfil-profile {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 40px;
+        height: 80px;
+        width: 100%;
+        background-color: #fd1d1d;
     }
 }

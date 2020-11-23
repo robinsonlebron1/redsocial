@@ -8,7 +8,7 @@ include_once URL_APP . '/views/custom/navbar.php';
 
 <div class="perfil-container-usuario">
     <div class="imagen-header-perfil-usuario">
-        <img src="<?php echo URL_PROJECT ?>/img/imagenesPerfil/imagenes-portada-perfil/cover-img.jpg" class="imagen-portada-perfil" alt="">
+        <img src="<?php echo URL_PROJECT ?>/img/fondo.png" class="imagen-portada-perfil" alt="">
     </div>
     <div class="container-header-usuario">
         <div class="container">
@@ -17,16 +17,16 @@ include_once URL_APP . '/views/custom/navbar.php';
                     <div class="datos-perfil-usuario">
                         <img src="<?php echo URL_PROJECT ?>/<?php echo $datos['perfil']->fotoPerfil ?>" class="imagen-perfil-usuario" alt="">
                         <?php if ($datos['usuario']->idusuario == $_SESSION['logueado']) : ?>
-                            <div class="imagen-perfil-cambiar">
+                        <div class="imagen-perfil-cambiar" > <img src="<?php echo URL_PROJECT ?>/img/cam.png" alt="" class="image-public">
                                 <form action="<?php echo URL_PROJECT ?>/perfil/cambiarImagen" method="POST" enctype="multipart/form-data">
-                                    <i class="fas fa-camera"></i>
+                                <i class="fas fa-camera"></i>
                                     <div class="input-file">
                                         <input type="hidden" name="id_user" value="<?php echo $_SESSION['logueado']?> ">
                                         <input type="file" name="imagen" id="imagen" required>
                                     </div>
                                     </div>
                                     <div class="editar-perfil">
-                                        <button class="btn-change-image">Editar</button>
+                                        <button class="btn btn-outline-success">Editar</button>
                                     </div>
                                 </form>
                             

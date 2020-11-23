@@ -10,39 +10,22 @@ include_once URL_APP . '/views/custom/navbar.php';
 
 <div class="container mt-3">
     <div class="row">
-        <!-- Columna perfil -->
-        <div class="col-md-3">
-            <div class="container-style-main">
-                <div class="perfil-usuario-main">
-                    <div class="background-usuario-main"></div>
-                    <img src="<?php echo URL_PROJECT . '/' . $datos['perfil']->fotoPerfil ?>" alt="">
-                    <div class="foto-separation"></div>
-                    <a href="<?php echo URL_PROJECT ?>/perfil/<?php echo $datos['usuario']->usuario ?>" class="links">
-                        <div class="text-center nombre-perfil"><?php echo $datos['perfil']->nombreCompleto ?></div>
-                    </a>
-                    <div class="tabla-estadisticas">
-                        <a href="#">Publicaciones <br> 0 </a>
-                        <a href="#">Me gustas <br> 0 </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Columna principal -->
+      
         <div class="col-md-6">
             <div class="container-style-main">
                 <div class="container-usuario-publicar">
                     <a href="<?php echo URL_PROJECT ?>/perfil/<?php echo $datos['usuario']->usuario ?>"><img src="<?php echo URL_PROJECT . '/' . $datos['perfil']->fotoPerfil ?>" class="image-border " alt=""></a>
                     <form action="<?php echo URL_PROJECT ?>/publicaciones/publicar/<?php echo $datos['usuario']->idusuario ?>" method="POST" enctype="multipart/form-data" class="form-publicar ml-2">
-                        <textarea name="contenido" id="contenido" class="published mb-0" name="post" placeholder="Que estas pensando?" required></textarea>
+                        <textarea name="contenido" id="contenido" name="post" placeholder="Publicac lo que desees" required></textarea>
                         <div class="image-upload-file">
                             <div class="upload-photo">
-                                <img src="<?php echo URL_PROJECT ?>/img/image.png" alt="" class="image-public">
+                                <img src="<?php echo URL_PROJECT ?>/img/cam.png" alt="" class="image-public">
                                 <div class="input-file">
                                     <input type="file" name="imagen" id="imagen">
                                 </div>
-                                <span class="ml-1">Subir foto</span>
+                                <span class="file">Cargar foto</span>
                             </div>
-                            <button class="btn-publi">Publicar</button>
+                            <button class="btn btn-outline-success">Publicar</button>
                         </div>
                     </form>
                 </div>
@@ -55,8 +38,8 @@ include_once URL_APP . '/views/custom/navbar.php';
                                 <span><?php echo $datosPublicacion->fechaPublicacion ?></span>
                             </div>
                             <?php if($datosPublicacion->idusuario == $_SESSION['logueado'] ): ?>
-                            <div class="acciones-publicacion-usuario">
-                                <a href="<?php echo URL_PROJECT ?>/publicaciones/eliminar/<?php echo $datosPublicacion->idpublicacion ?>"><i class="far fa-trash-alt"></i></a>
+                                <div class="acciones-publicacion-usuario">
+                                <a href="<?php echo URL_PROJECT ?>/publicaciones/eliminar/<?php echo $datosPublicacion->idpublicacion ?>" class="btn btn-outline-danger"><img src="<?php echo URL_PROJECT ?>/img/trash.png" alt="" class="image-public"><i class="far fa-trash-alt"></i><spam>eliminar</spam></a>
                             </div>
                             <?php endif ?>
                         </div>
@@ -72,7 +55,7 @@ include_once URL_APP . '/views/custom/navbar.php';
                                                     echo 'like-active';
                                                 }
                                             } ?>
-                                            "><i class="fas fa-heart mr-1"></i>Me gusta <span><?php echo $datosPublicacion->num_likes ?></span></a>
+                                            "><img src="<?php echo URL_PROJECT ?>/img/like.png" alt="" class="image-public"><i ></i><span><?php echo $datosPublicacion->num_likes ?></span></a>
                         </div>
                         <hr>
                         <div class="formulario-comentarios">
@@ -84,7 +67,7 @@ include_once URL_APP . '/views/custom/navbar.php';
                                     <input type="hidden" name="idpublicacion" value="<?php echo $datosPublicacion->idpublicacion ?>">
                                     <input type="text" name="comentario" class="form-comentario-usuario" placeholder="Agregar un comentario" required>
                                     <div class="btn-comentario-container">
-                                        <button class="btn-purple">Comentar</button>
+                                        <button class="btn btn-primary">Comentar</button>
                                     </div>
                                 </form>
                             </div>
@@ -97,7 +80,7 @@ include_once URL_APP . '/views/custom/navbar.php';
                                     <div class="contenido-comentario-usuario">
 
                                         <?php if ($datosComentarios->iduser == $_SESSION['logueado']) : ?>
-                                            <a href="<?php echo URL_PROJECT ?>/publicaciones/eliminarComentario/<?php echo $datosComentarios->idcomentario ?>" class="float-right"><i class="far fa-trash-alt"></i></a>
+                                            <a href="<?php echo URL_PROJECT ?>/publicaciones/eliminarComentario/<?php echo $datosComentarios->idcomentario ?>" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i><spam>eliminar</spam></a>
                                         <?php endif ?>
 
                                         <a href="<?php echo URL_PROJECT ?>/perfil/<?php echo $datosComentarios->usuario ?>" class="big mr-2"><?php echo $datosComentarios->usuario ?></a>
@@ -115,11 +98,24 @@ include_once URL_APP . '/views/custom/navbar.php';
             </div>
         </div>
         <!-- Columna eventos -->
+
         <div class="col-md-3">
             <div class="container-style-main">
-
+                <div class="perfil-usuario-main">
+                    <div class="divperfil-profile"><br><br><br><br></div>
+                    <img src="<?php echo URL_PROJECT . '/' . $datos['perfil']->fotoPerfil ?>" alt="foto de perfil">
+                    <div class="foto-separation"></div>
+                    
+                        <div class="text-center nombre-perfil"><?php echo $datos['perfil']->nombreCompleto ?></div>
+                  
+                    <div class="tabla-estadisticas">
+                        <a href="#">Publicaciones <br> 0 </a>
+                        
+                    </div>
+                </div>
             </div>
         </div>
+        
     </div>
 </div>
 

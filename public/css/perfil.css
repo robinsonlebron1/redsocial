@@ -1,10 +1,13 @@
 /* Completar Perfil */
 
 .completarPerfil {
+    background-color: #000000;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center
+    
+    
 }
 
 hr {
@@ -50,16 +53,16 @@ hr {
     width: 40px;
     height: 40px;
     right: 120px;
-    background-color: #926dde;
-    border-radius: 50%;
+  
+    border-radius: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+   
 }
 
 .imagen-perfil-cambiar:hover {
-    color: #4f406b;
+   
 }
 
 .datos-perfil-usuario {
@@ -75,7 +78,7 @@ hr {
 .btn-change-image {
     border: 0;
     border-radius: 10px;
-    background-color: #926dde;
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -97,9 +100,8 @@ hr {
     text-decoration: none
 }
 
-
 .btn-message {
-    background-color: #926dde;
+    background-color: #000000;
     padding: .6em;
     border-radius: 10px;
     color: #ffffff;
@@ -109,7 +111,7 @@ hr {
 .btn-message:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: #a281e4
+    background-color: #000000
 }
 
 .datos-personales-usuario {
@@ -125,6 +127,6 @@ hr {
 .descripcion-usuario {
     font-size: 18px;
     font-weight: 600;
-    color: #686868;;
+    color: #686868;
+    ;
 }
-

@@ -3,18 +3,35 @@
 include_once URL_APP . '/views/custom/header.php';
 
 ?>
+<h1>hola</h1>
+<div class="container">
 
-<div class="container-center center">
-    <div class="container-content center">
-        <div class="content-action center">
-            <h4>Iniciar sesión</h4>
-            <form action="<?php echo URL_PROJECT ?>/home/login" method="POST">
-                <input type="text" name="usuario" placeholder="Usuario" required>
-                <input type="password" name="contrasena" placeholder="Contraseña" required>
-                <button class="btn-purple btn-block">Ingresar</button>
-            </form>
-            <!-- Esta es la alerta cuando el usuario o la contraseña son incorrectos -->
-            <?php if (isset($_SESSION['errorLogin'])) : ?>
+        <div class="row">
+        
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    Iniciar sesion
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                    <form action="<?php echo URL_PROJECT ?>/home/login" method="POST">
+                            <div class="form-group">
+                                <label class="form-control-label">Usuario</label>
+                                <input type="text" name="usuario" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Contraseña</label>
+                                <input type="password" name="contrasena" class="form-control" i required>
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                <?php if (isset($_SESSION['errorLogin'])) : ?>
                 <div class="alert alert-danger alert-dismissible fade show mt-2 mb-2" role="alert">
                     <?php echo $_SESSION['errorLogin'] ?>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -34,16 +51,22 @@ include_once URL_APP . '/views/custom/header.php';
                 </div>
                 <?php unset($_SESSION['loginComplete']);
             endif ?>
-
-            <div class="contenido-link mt-2">
-                <span class="mr-2">¿No tienes una cuenta?</span><a href="<?php echo URL_PROJECT ?>/home/register">Registrarme</a>
+                                </div>
+                                <div class="contenido-link mt-2">
+                <a href="<?php echo URL_PROJECT ?>/home/register">Aun no te has registrado?</a>
+            </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="submit" class="btn btn-outline-success">Iniciar sesion</button>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
             </div>
         </div>
-        <div class="content-image center">
-            <img src="<?php echo URL_PROJECT ?>/img/vector.png" alt="Hombre sentado en una computadora">
-        </div>
-    </div>
-</div>
+
 
 <?php
 

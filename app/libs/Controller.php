@@ -2,6 +2,8 @@
 
 class Controller
 {
+
+    
     public function model($modelo)
     {
         require_once '../app/models/' . $modelo . '.php';

@@ -2,6 +2,7 @@
 
 class Home extends Controller
 {
+   
     public function __construct()
     {
         $this->usuario = $this->model('usuario');
@@ -161,6 +162,13 @@ class Home extends Controller
             }
         }
     }
+
+
+
+
+
+
+
 
     public function buscar()
     {
